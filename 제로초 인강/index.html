@@ -163,6 +163,7 @@
       }
     </style>
   </head>
+
   <body>
     <div id="wrap">
       <div id="wrap-center">
@@ -186,6 +187,8 @@
             <!--::after-->
           </button>
         </div>
+
+        <!--search의 style-->
         <style>
           #search > form {
             display: inline-flex;
@@ -196,8 +199,9 @@
             text-align: left;
           }
           #search > form:hover {
-            box-shadow: 0 2px 4px 0 rgba(0,0,0,.12); 
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
           }
+          
           #search-svg {
             display: inline-flex;
             justify-content: center;
@@ -206,8 +210,22 @@
             margin-right: 12px;
             height: 100%;
             padding-left: 10px;
+            position: relative;
           }
-          #search-svg svg {  
+          #search-svg::after {
+            display: none;
+          }
+          #search > form:focus-within #search-svg::after {
+            content:'';
+            width: 1px;
+            height: 20px;
+            background-color: #e4e4e4; 
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            top: 20px;
+          }
+          #search-svg svg {
             width: 24px;
             height: 24px;
             fill: #03c75a;
@@ -224,8 +242,8 @@
           #search-input::placeholder {
             color: white;
           }
-          #search-input:focus::placeholder{
-            color: e4e4e4; 
+          #search-input:focus::placeholder {
+            color: e4e4e4;
           }
 
           #search-right {
@@ -234,12 +252,14 @@
             align-items: stretch;
             justify-content: flex-end;
           }
-          #search-keyboard, #search-recent, #search-button{
+          #search-keyboard,
+          #search-recent,
+          #search-button {
             background: transparent;
             border: none;
             cursor: pointer;
           }
-         
+
           #search-keyboard::before {
             content: "";
             display: block;
@@ -249,11 +269,9 @@
             background-repeat: no-repeat;
             width: 24px;
             height: 14px;
-
           }
           #search-keyboard:hover::before {
-            filter: brightness(0.7); 
-
+            filter: brightness(0.7);
           }
           #search-recent::before {
             content: "";
@@ -264,12 +282,11 @@
             background-repeat: no-repeat;
             width: 10px;
             height: 6px;
-
           }
           #search-button {
             padding: 17px 27px 16px 10px;
           }
-          #search-button > div { 
+          #search-button > div {
             background: #03c75a;
             width: 25px;
             height: 25px;
@@ -283,11 +300,8 @@
             background-repeat: no-repeat;
             width: 25px;
             height: 25px;
-            
-
           }
         </style>
-
         <div id="search">
           <form action="">
             <a id="search-svg" href="#">
