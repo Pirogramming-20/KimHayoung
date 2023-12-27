@@ -74,8 +74,9 @@
       }
 
 
-        html, body {
+        html, body, form {
             margin : 0;
+            padding : 0; 
             
         }
         #wrap{
@@ -89,6 +90,7 @@
         #header {
           text-align: left; 
           position: relative; 
+          height: 64px; 
         }
         /*--공통묶기--*1-11강*/
         #header-hamburger, #header-navertalk, #header-notice {
@@ -180,10 +182,47 @@
                   <!--::after-->
                 </button>
             </div>
-            <div id="search"></div>
+            <style>
+              #search > form {
+                display: inline-block; 
+                width: 708px;
+                height: 60px;
+                border: 1px solid #03c75a; 
+                border-radius: 33px; 
+                text-align: left; 
+              }
+              #search-svg {
+                display: inline-block;
+                width: 68px;
+                margin-right: 12px;
+                height: 100%; 
+              }
+             
+
+            </style>
+
+            <div id="search">
+              <form action="">
+                <a id="search-svg" href="#">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.273 12.845 7.376 0H0v24h7.727V11.155L16.624 24H24V0h-7.727v12.845z"></path></svg>
+                </a>
+                <label for="search-input" class="blind">검색어 입력</label> 
+                <input for="search-input" type="text" placeholder="검색어를 입력하세요." />
+                <div id="search-right">
+                  <button href="#" id="search-keyboard">
+                    <span class="blind">입력도구</span>
+                  </button>
+                  <button href="#" id="search-recent">
+                    <span class="blind">자동완성/최근검색어펼치기</span>
+                  </button>
+                  <button id="search-button">
+                    <div><span class="blind">검색어</span></div> 
+                  </button>
+                </div>
+              </form>
+            </div>
             <div id="nav"></div>
             <div id="main"></div>
-
         </div>
     </div>
 </body>
