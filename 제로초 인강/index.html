@@ -196,13 +196,15 @@
             text-align: left;
           }
           #search-svg {
-            display: inline-block;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             width: 68px;
             margin-right: 12px;
             height: 100%;
             padding-left: 10px;
           }
-          #search-svg svg {
+          #search-svg svg {  
             width: 24px;
             height: 24px;
             fill: #03c75a;
@@ -217,7 +219,15 @@
             outline: none;
           }
           #search-right {
-            display: inline-block;
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-end;
+          }
+          #search-keyboard, #search-recent, #search-button{
+            background: transparent;
+            border: none;
+            cursor: pointer;
           }
           #search-keyboard::before {
             content: "";
@@ -232,7 +242,7 @@
           }
           #search-recent::before {
             content: "";
-            display: block;
+            display: inline-flex;
             background-image: url(https://pm.pstatic.net/resources/asset/sp_main.d5b6c236.png);
             background-size: 433px 412px;
             background-position: -133px -201px;
