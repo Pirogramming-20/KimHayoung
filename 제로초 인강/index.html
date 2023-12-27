@@ -557,6 +557,55 @@
           #main-login>div:first-of-type{
             line-height: 20px;
           }
+          #main-login-button {
+            vertical-align: -1px;
+            margin-top: 13px;
+            padding: 17px;
+            background-color: #03c75a;
+            color: white;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            height: 56px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-bottom: 16px;
+          }
+          #main-login-button i {
+            background-image: url(./sp_main.png);
+            background-size: 433px 412px;
+            background-position: -120px -166px;
+            background-repeat: no-repeat;
+            width: 72px;
+            height: 14px;
+            display: inline-block;
+            margin: 3px 8px 0 0;
+          }
+
+          #main-login > div:last-of-type {
+            font-size: 1.3rem;
+          }
+          #main-login > div:last-of-type a {
+            text-decoration: none;
+            color: var(--color_caption2);
+            letter-spacing: -0.4px;
+          }
+          #main-login > div:last-of-type > a:first-of-type,
+          #main-login > div:last-of-type > a:last-of-type {
+            position: relative;
+          }
+          #main-login > div:last-of-type a:hover {
+            text-decoration: underline;
+          }
+          #main-login > div:last-of-type > a:nth-of-type(2)::before,
+          #main-login > div:last-of-type > a:nth-of-type(2)::after {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            background-color: #d3d5d7;
+            background-color: var(--color_dot_divider);
+            margin: 4px 12px 0;
+          }
+          
           
         </style>
 
@@ -621,9 +670,35 @@
                 <button class="grid"><span class="blind">격자보기</span></button>
               </footer>
             </section>
-            /*-------*/ 
-            
-              /*---*/
+            <section id="main-shopping" class="left-section">
+              <div id="main-shopping-top">
+                <header>
+                  <a href="#" class="bold">쇼핑</a>
+                  <a href="#" class="slash">맨즈</a>
+                  <a href="#" class="slash">원쁠딜</a>
+                  <a href="#" class="slash">쇼핑라이브</a>
+                </header>
+                <div id="main-shopping-gray">
+                  <div class="left">
+                    <a href="#">오늘의 혜택</a>
+                    <div>
+                      <a href="#">내일은 무슨 넷플릭스 영화를 볼까, 굉장히 고민된다.</a>
+                    </div>
+                  </div>
+                  <div class="right">
+                    <span>1</span>
+                    <span>/18</span>
+                    <button class="prev"><span class="blind">이전페이지</span></button>
+                    <button class="next"><span class="blind">다음페이지</span></button>
+                  </div>
+                </div>
+                
+              </div>
+
+
+
+
+            </section> 
             </section>
           </div>
           <div id="main-right">
