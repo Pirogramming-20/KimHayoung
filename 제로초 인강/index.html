@@ -707,12 +707,99 @@
             margin: 10px 0 0 5px;
             vertical-align: 3px;
           }
+          #main-newstand-animation {
+            padding-left: 25px;
+            position: relative;
+            display: flex;
+          }
+          #main-newstand-animation::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            background-color: #d3d5d7;
+            background-color: var(--color_dot_divider);
+            width: 1px;
+            height: 12px;
+          }
+          #main-newstand-animation a:first-of-type {
+            position: relative;
+            top: -1px;
+            line-height: 26px;
+          }
+          #main-newstand-animation a:first-of-type::after {
+            content: "";
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            background-color: #d3d5d7;
+            background-color: var(--color_dot_divider);
+            margin: 12px 6px 0 6px;
+            border-radius: 50%;
+            vertical-align: 5px;
+          }
+          #main-newstand-animation a:last-of-type {
+            text-overflow: ellipsis;
+            width: 400px;
+            white-space: nowrap;
+            display: inline-block;
+            overflow: hidden;
+          }
+          #main-newstand-gray .right {
+            display: flex;
+          }
+          #main-newstand-gray .bold {
+            font-weight: bold;
+            padding-left: 25px;
+            position: relative;
+          }
+          #main-newstand-gray .bold::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            width: 1px;
+            height: 12px;
+            background-color: #d3d5d7;
+            background-color: var(--color_dot_divider);
+          }
+          .left-section a {
+            text-decoration: none;
+          }
+          .left-section a:visited {
+            color: inherit;
+          }
+          .left-section a:hover {
+            text-decoration: underline;
+          }
+          #main-newstand-gird {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-rows: 56px 56px 56px 56px;
+            grid-template-columns: 131.27px 131.27px 131.27px 131.27px 131.27px 131.27px;
+            border: 1px solid var(--color_border_in);
+            background-color: var(--color_border_in);
+            border-radius: 4px;
+            margin-top: 18px;
+            width: 790px;
+            column-gap: 1px;
+            row-gap: 1px;
+          }
+          #main-newstand-grid > div {
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
 
 
           
           
         </style>
-
 
         <main id="main">
           <div id="main-left">
@@ -774,7 +861,7 @@
                 <button class="grid"><span class="blind">격자보기</span></button>
               </footer>
             </section>
-            <section id="main-shopping" class="left-section">
+            <section id="main-shopping" class="left-section"> 
               <div id="main-shopping-top">
                 <header>
                   <a href="#" class="bold">쇼핑</a>
@@ -795,7 +882,7 @@
                     <button class="prev"><span class="blind">이전페이지</span></button>
                     <button class="next"><span class="blind">다음페이지</span></button>
                   </div>
-                </div>
+                </div> 
                 <div id="main-shopping-grid">
                   <div class="item">
                     <div class="imge"></div>
@@ -837,14 +924,11 @@
                   </div>
                 </div>
               </div>
-
-                
-              </div>
-
-
-
-
-            </section> 
+              <footer>
+                <button class="prev"><span class="blind">이전 페이지</span></button>
+                <div class="text"><span class="hot">아이템</span>&nbsp;더보기&nbsp;1<span class="total">/18</span></div>
+                <button class="next"><span class="blind">다음 페이지</span></button>
+              </footer>
             </section>
           </div>
           <div id="main-right">
@@ -868,8 +952,10 @@
             </section>
           </div>
         </main>
-        
       </div>
     </div>
   </body>
 </html>
+
+
+    
