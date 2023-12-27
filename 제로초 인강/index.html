@@ -605,6 +605,110 @@
             background-color: var(--color_dot_divider);
             margin: 4px 12px 0;
           }
+          #main-right-ad {
+            height: 240px;
+          }
+          .main-w_s {
+            padding: 0 18px;
+          }
+          .main-w_s > header {
+            height: 52px;
+            padding: 6px 0;
+          }
+          .main-w_s > div {
+            border-top: 1px solid var(--color_border_in);
+          }
+          #main-weather {
+            height: 236px;
+          }
+          #main-stock {
+            height: 236px;
+          }
+          #main-newstand {
+            height: 426px;
+            display: flex;
+            flex-flow: column;
+          }
+          #main-newstand-top,
+          #main-shopping-top {
+            flex: 1;
+            padding: 18px 20px;
+          }
+          #main-newstand-top .dot::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background-color: #d3d5d7;
+            background-color: var(--color_dot_divider);
+            margin: 9px 7px 0;
+            border-radius: 50%;
+            vertical-align: 5px;
+          }
+          .left-section .slash,
+          .left-section .dot {
+            font-weight: 800px;
+            color: rgba(8, 8, 8, 0.5);
+          }
+          .left-section .slash {
+            position: relative;
+            padding-left: 26px;
+          }
+          .left-section .slash::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 4px;
+            left: 13px;
+            width: 1px;
+            height: 15px;
+            background-color: #d3d5d7;
+            background-color: var(--color_dot_divider);
+            transform: skewX(-15deg);
+          }
+          .left-section header {
+            font-size: 1.6rem;
+            color: rgba(8, 8, 8, 0.5);
+            display: flex;
+            justify-content: flex-start;
+            line-height: 23px;
+            margin-bottom: 17px;
+          }
+          .left-section header .bold {
+            font-weight: bold;
+            color: black;
+          }
+          #main-newstand-gray {
+            display: flex;
+            justify-content: flex-start;
+            height: 50px;
+            padding: 12px 20px;
+            background-color: var(--color_option_bg);
+            border-radius: 4px;
+            font-size: 1.4rem;
+            line-height: 26px;
+          }
+          #main-newstand-gray .left {
+            flex: 1;
+            display: flex;
+          }
+          #main-newstand-gray .left > a:first-of-type {
+            width: 85.5px;
+          }
+          #main-newstand-gray .left > a:first-of-type::after {
+            content: "";
+            background: url("./sp_main.png");
+            background-size: 433px 412px;
+            background-position: -154px -201px;
+            background-repeat: no-repeat;
+            width: 9px;
+            height: 6px;
+            display: inline-block;
+            margin: 10px 0 0 5px;
+            vertical-align: 3px;
+          }
+
+
           
           
         </style>
@@ -692,6 +796,48 @@
                     <button class="next"><span class="blind">다음페이지</span></button>
                   </div>
                 </div>
+                <div id="main-shopping-grid">
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">5</div>
+                  <div class="item">6</div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div class="imge"></div>
+                    <div class="text">벌써 아침이야..</div>
+                  </div>
+                  <div class="item">
+                    <div></div>
+                    <div>쓸만한 단축키들을 따로 외워둘것</div>
+                  </div>
+                </div>
+              </div>
+
                 
               </div>
 
