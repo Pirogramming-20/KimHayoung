@@ -53,7 +53,7 @@
 # checkout은 깃에 들어가겠다고 노크 똑똑
 # git branchgit checkout -b feature/cart : feature/cart라는 브랜치가 만들어졌다. 
 
-featrue/cart에서 무슨뜻이지?
+# featrue/cart에서 무슨뜻이지?
 
 
 
