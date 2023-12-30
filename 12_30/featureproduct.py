@@ -4,5 +4,5 @@ def piro(product):
 def product():
     return 4
 
-def pay():
+def payment():
     return 5
