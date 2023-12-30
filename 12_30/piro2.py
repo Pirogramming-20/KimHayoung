@@ -9,3 +9,6 @@ def newcode():
 
 def morecode():
     return 
+
+def makingnewcodetoMerge():
+    return 
