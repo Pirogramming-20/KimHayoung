@@ -19,6 +19,28 @@ function createHTMLString(item) {
     </li>
     `;
 }
+
+function onButtonClick(event, items){
+    const dataset = event.target.dataset;
+    const key = dataset.key;
+    const value = dataset.value;
+
+    if(key == null || value == null){
+        return;
+    }
+    displayItems(items.filter(item => item[key] === value));
+
+}
+
+function setEventListener(items) {
+    const logo = document.querySelector('.logo');
+    const buttons = document.querySelector('.buttons');
+    logo.addEventListener('click', () => displayItems(items));
+    buttons.addEventListener('click', event => onButtonClick(event, items));
+
+
+}
+
 // main
 loadItems() 
 .then(items => {
