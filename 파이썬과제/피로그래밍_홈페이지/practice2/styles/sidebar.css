@@ -1,0 +1,14 @@
+@media screen and (max-width: 700px) {
+  #sidebar {
+    width: 300px;
+    height: calc(100vh - var(--header-height)); /*사이드바 길이 : 전체높이에 헤더높이 빼기*/
+    background-color: gray;
+    position: fixed; /*스크롤해도 보이도록 fix*/
+    top: var(--header-height); /*사이드바 상단의 위치*/
+    right: -300px; /*평소엔 안보이도록 화면밖에 있다가*/
+    transition: 0.3s;
+  }
+  #hamburger-icon input:checked ~ .sidebar {
+    right: 0; /*checked 되면 화면에 보이도록 위치조정*/
+  }
+}

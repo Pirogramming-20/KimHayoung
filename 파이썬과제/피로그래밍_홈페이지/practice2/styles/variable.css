@@ -1,0 +1,11 @@
+:root {
+  --gutter: 1.6rem;
+  --offset: 4rem;
+  --green: #0bec12;
+  --header-height: 9rem;
+  --bg-gray: #333333;
+  --heading3: 2.2rem;
+  --body1: 1.6rem; 
+
+  --body2: 1.4rem; 
+}

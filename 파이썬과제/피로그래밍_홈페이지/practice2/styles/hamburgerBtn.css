@@ -1,0 +1,38 @@
+#hamburger-icon {
+  display: none; /*평소엔 안보인다.*/
+  flex-direction: column; /*햄버거 내의 div 요소들 수직으로*/
+  width: 3rem;
+}
+#hamburger-icon > div {
+  height: 3px;
+  margin: 3px 0;
+  background-color: white;
+  transition: 0.3s; /*변화시간 0.3초*/
+}
+#hamburger-icon > div:nth-of-type(1) {
+  width: 50%;
+}
+#hamburger-icon > div:nth-of-type(3) {
+  width: 75%;
+}
+#hamburger-icon > input:checked ~ div:nth-of-type(1) {
+  transform: rotate(45deg) /*45도 회전*/ translate(4px, 0); /*가로축으로 4픽셀 이동*/
+  transform-origin: bottom; /*요소 변형 위치*/
+}
+#hamburger-icon > input:checked ~ div:nth-of-type(2) {
+  transform: rotate(-45deg);
+  transform-origin: top;
+}
+#hamburger-icon > input:checked ~ div:nth-of-type(3) {
+  transform: rotate(45deg) translate(1px, -10px);
+  transform-origin: bottom;
+}
+/*transition : 변형 시간
+transform : 실제 변형
+transform-origin : 변형 위치*/
+
+@media screen and (max-width: 700px) {
+  #hamburger-icon {
+    display: flex;
+  }
+}

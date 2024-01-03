@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #000000;
-  color: #ffffff;
+  color: #ffffff; 
 }
 
 header {
@@ -62,7 +62,7 @@ main {
   background-color: white;
   border-radius: 6px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .signup-form form {
@@ -79,15 +79,17 @@ input[type="password"] {
   border-radius: 6px;
 }
 
+
+
 footer {
-  display: flex;
-
-  padding: 20px;
-  background-color: #f6f8fa; /* Match the body's background color */
-}
-
-footer img {
-  width: 200px; /* Adjust the size as needed */
-  height: auto;
-  margin-left: 70%; /* Align to the right */
-}
+    display: flex;
+    
+    padding: 20px;
+    background-color: #f6f8fa; /* Match the body's background color */
+  }
+  
+  footer img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 70%; /* Align to the right */
+  }
