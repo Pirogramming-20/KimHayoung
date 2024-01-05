@@ -1,0 +1,226 @@
+/* 기본 폰트 설정과 배경색을 설정합니다. */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: pink;
+  /* background-color: #f5f5f5; */
+  margin: 0;
+  padding: 0;
+}
+
+/* 스톱워치 컨테이너 전체 스타일링입니다. */
+.stopwatch-container {
+  width: 80%;
+  max-width: 500px;
+  /* background-color: #e0e0e0; */
+  margin: 0 auto;
+  /* + 맨 위에서 좀 띄자 */
+  border-radius: 20px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 상단 헤더 스타일링입니다. */
+.stopwatch-container h1 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #333;
+  margin-top: 100px;
+  padding: 10px;
+  background-color: red;
+}
+
+/* 스톱워치 디스플레이와 버튼들의 스타일링입니다. */
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 20px;
+  background-color: yellow;
+  padding: 50px;
+  border-radius: 30px;
+}
+
+#timer {
+  font-size: 2em;
+
+  /* margin-bottom: 10px; */
+  background-color: blue;
+  padding: 15px 130px;
+  border-radius: 40px;
+  font-size: 4rem;
+}
+.count {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.stopwatch button {
+  padding: 15px 10px;
+
+  margin: 5px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.stopwatch button:hover {
+  background-color: #bbb;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* 기록 컨테이너 스타일링입니다. */
+.record-container {
+  background-color: #d9d9d9;
+  /* padding: 10px; */
+  border-radius: 10px;
+}
+
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: red;
+}
+.record-head img {
+  background-color: yellow;
+  /* 나중에 모두다 transparent */
+  width: 30px;
+}
+
+.record-head button {
+  /* padding: 5px 10px; */
+  display: flex;
+
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* // + 글자 어떻게 없앨까?  */
+}
+
+.record-head button:hover {
+  background-color: #bbb;
+}
+
+.record-write {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  align-content: center;
+
+  padding: 10px 10px;
+  background-color: red;
+}
+.record-write img {
+  width: 30px;
+  background-color: yellow;
+}
+
+.record-write button {
+  display: flex;
+
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+}
+.record-write p {
+  background-color: pink;
+}
+
+#delete-one {
+  border: none;
+  background-color: orange;
+  cursor: pointer;
+}
+
+/* 구간 기록 스타일 */
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  background-color: #f3f3f3; /* 또는 원하는 배경색 */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* 구간 기록 삭제 버튼 스타일 */
+.records-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: blue;
+}
+
+.delete-one {
+  background-color: transparent; /* 버튼 배경을 투명하게 */
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+
+  display: flex;
+
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+}
+.delete-one img {
+  width: 30px;
+  width: 30px;
+  background-color: yellow;
+}
+
+/* 구간 기록 시간 스타일 */
+.records-list span {
+  font-size: 1.5rem; /* 시간 글자 크기 */
+  color: #333; /* 시간 글자 색상 */
+  margin-left: 10px;
+}
+
+/*-------새로 생성되는 구간의 스타일을 수정---------*/
+
+/* 각 기록 구간의 스타일 */
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+/* 삭제 버튼 스타일 */
+.delete-one {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* 삭제 버튼 이미지 스타일 */
+.delete-one img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 기록된 시간 텍스트 스타일 */
+.record span {
+  font-size: 16px;
+  color: #333;
+}

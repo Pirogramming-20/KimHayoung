@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    
+</head>
+<body>
+    <div class="stopwatch-container">
+        <h1><img src="./timer.png" class="timer-png"> 피로그래밍 스톱워치</h1>
+        <div class="stopwatch">
+            <div class="count">
+                <span id="timer">00:00</span>
+            </div>
+            <div class="buttons">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        <div class="record-container">
+            <div class="record-head">
+                <button id="delete-all"><img src="./ellipse-outline.svg"></button>
+                <div id="record-title">구간 기록</div>
+                <button id="delete-icon"><img src="./delete.png"></button>
+            </div>
+            <div id="records-list" class="records-list">
+                <!-- 새로운 기록을 추가할 부분! -->
+            </div>
+            
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
