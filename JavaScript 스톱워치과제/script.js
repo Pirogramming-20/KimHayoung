@@ -11,21 +11,23 @@ const resetButton = document.getElementById('reset');
 const recordsContainer = document.getElementById('records-list');
 const deleteIcon = document.getElementById('delete-icon');
 
-// 시간을 mm:ss 형식으로 변환하는 함수
+// 시간을 ss:ms 형식으로 변환하는 함수 (밀리초를 두 자리로 표시)
 function formatTime(time) {
-    const minutes = Math.floor(time / 60).toString().padStart(2, '0');
-    const seconds = (time % 60).toString().padStart(2, '0');
-    return `${minutes}:${seconds}`;
+    const seconds = Math.floor(time / 1000).toString().padStart(2, '0');
+    // 밀리초를 10으로 나누고 정수 부분만 사용하여 두 자리로 만듭니다.
+    const milliseconds = Math.floor((time % 1000) / 10).toString().padStart(2, '0');
+    return `${seconds}:${milliseconds}`;
 }
+
 
 // 타이머를 시작하는 함수
 function startTimer() {
     if (!isRunning) {
         isRunning = true;
         timerInterval = setInterval(() => {
-            elapsedTime += 1;
+            elapsedTime += 10; // 10밀리초 증가
             timerElement.textContent = formatTime(elapsedTime);
-        }, 1000);
+        }, 10); // 10밀리초마다 업데이트
     }
 }
 
