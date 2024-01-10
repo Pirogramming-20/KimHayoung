@@ -127,6 +127,12 @@ for name in girls :
 for i in range(1, 11) :
     print(i) 
 
+#django 설치완료, pip 업그레이드
+    
+    
+    
+
+
 
 
 
