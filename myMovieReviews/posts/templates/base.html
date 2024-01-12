@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    {% block extrahead %}{% endblock %}
+</head>
+
+<body>
+    <div class = "logo">
+        <a href="/posts" class="site-name">
+            <!-- <div id="title">my <span id="highlight">Movie</span> reviews</div> -->
+            <h3 id="my">my</h3>
+            <h3 id="movie"> MOVIE</h3>
+            <h3 id="reviews"> REVIEWS</h3>
+        </a>
+        
+        
+        <a href="/posts/create" class="add-new-review">Add a New Review</a>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

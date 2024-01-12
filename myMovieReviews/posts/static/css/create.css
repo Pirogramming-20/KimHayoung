@@ -1,0 +1,113 @@
+  .review-box{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    justify-content:center;
+    padding: 15px;
+    border-radius: 10px;
+
+    
+  }
+  .review-box-center{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    justify-content:center;
+    background-color: rgb(237, 227, 229);
+    padding: 15px;
+    border-radius: 10px;
+    
+
+
+  }
+  .title {
+    
+    /* background-color: yellow; */
+    color: black;
+    text-align: center;
+    font-size: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(198, 190, 190);
+    padding-bottom: 10px;
+    
+
+  }
+  .red-text {
+    color: red;
+  }
+
+  
+  form {
+    /* background-color: rgb(158, 135, 135); */
+    padding: 20px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    width: 300px;
+    margin-bottom: 30px;
+    
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* This ensures padding doesn't affect overall width */
+    /* background-color: goldenrod; */
+    margin-top: 5px;
+  }
+  .write-review{  
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+#write-review-title,
+#write-review-year,
+#write-review-g,
+#write-review-score,
+#write-review-content,
+#write-review-a,
+#write-review-d,
+#write-review-r{
+  margin-bottom: 5px; 
+
+}
+.write-review {
+  margin-bottom: 30px;
+}
+
+
+
+  .submit-box {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+
+    /* background-color: aliceblue; */
+  }
+  input[type="submit"] {
+    background-color: #8825a7;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #64197a;
+  }
+  
+ 
+ 
+
+  

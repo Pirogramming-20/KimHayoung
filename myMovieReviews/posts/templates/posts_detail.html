@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="detail">
+      <div class="top">
+        <h1>{{ post.movie_title }}</h1>
+        <div class="update-delete">
+          <a  href="/posts/{{post.id}}/update" class="update">수정</a>
+          <form action="/posts/{{post.id}}/delete" method="post">
+              {% csrf_token %}
+              <input type="submit" class="delete-btn" value="삭제">
+          </form>
+        </div>
+      </div>
+      
+
+      <div class="up-box">
+        <div class = "img-box">
+          <img class="card-img" src="{% static 'posts/images/example.png' %}" alt="Movie Image">
+        </div>
+        <div class="texts">
+          <div class="texts-margin">
+          <small>개봉연도: {{ post.created_year }}</small>
+          <br />
+          <small>감독: {{ post.director }}</small>
+          <br />
+          <small>주연: {{ post.actor }}</small>
+          <br />
+          <small>장르: {{ post.genre }}</small>
+          <br />
+          <small>별점: {{ post.score }}</small>
+          <br />
+          <small>러닝타임: {{ post.running_time }}</small>
+          <br />
+
+          </div>
+          
+
+        </div>
+      
+        
+
+      </div>
+      <div class="down-box">
+        <p>{{ post.review_content }}</p>
+      </div>
+      
+      <br />
+
+
+
+      
+
+
+
+    </div>
+{% endblock %}
+

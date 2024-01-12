@@ -1,0 +1,117 @@
+body {
+  /* font-family: 'Arial', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+  display: flex;
+  padding: 10px 50px;
+  justify-content: space-between;
+  /* background-color: antiquewhite; */
+  align-items: center;
+  border-bottom: 1px solid rgb(198, 190, 190);
+
+}
+.site-name {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;  
+
+}
+.add-new-review{
+  text-decoration: none;
+}
+#my {
+  margin-right: 5px;
+}
+#movie {
+  color: red;
+  margin-right: 5px;
+}
+
+.review-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+    padding: 5% 10%;
+  }
+  
+  .card {
+    width: 240px;
+    height: outo; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgb(237, 227, 229);
+    padding: 15px;
+    
+  }
+  @media (max-width: 600px) {
+    .card { 
+      width : 30% 
+    }
+  }
+  
+
+.img-box {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}  
+  .card-img {
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+
+  }
+  .card-content {
+    /* padding: 15px; */
+    background-color: rgb(237, 227, 229);
+  }
+  
+  .movie-title {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+  #my, 
+  #movie, 
+  #reviews {
+    text-decoration: none; 
+    color: inherit; 
+
+  } 
+  .site-name, 
+  .site-name:link, 
+  .site-name:visited, 
+  .site-name:hover, 
+  .site-name:active {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+
+  .site-name-title, 
+  .site-name-title:link, 
+  .site-name-title:visited, 
+  .site-name-title:hover, 
+  .site-name-title:active {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  #movie {
+    color: red;
+    margin-right: 5px;
+  }
+
+  .texts-margin{
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+  
+ 
+
+  
+  

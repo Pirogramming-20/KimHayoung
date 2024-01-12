@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/posts_list.css' %}">
+{% endblock %}
+
+{% block content %}
+     
+    <div class = "review-container">
+        {% for post in posts %}
+        <div class="card">
+            <div class = "img-box">
+                <img class="card-img" src="{% static 'posts/images/example.png' %}" alt="Movie Image">
+            </div>
+            <div class = "card-content">
+                <div><a href="/posts/{{post.id}}" class="movie-title">{{post.movie_title}} </a></div>
+                <p>개봉연도 {{post.created_year}}년</p>
+                <p>장르 {{post.genre}} </p>
+                <p>별점 {{post.score}}</p>    
+            </div>
+        </div>
+        {% endfor %}
+    </div> 
+{% endblock %}
+
+

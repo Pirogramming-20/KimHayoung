@@ -1,0 +1,99 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.detail{
+    padding: 0 50px;
+    font-size: 1rem;
+}
+.up-box{
+    background-color: rgb(237, 227, 229);
+    padding: 5px;
+    padding-bottom: 0;
+    display: flex;
+    height: 205px;
+    padding-left: 10px;
+    border-radius: 5px;
+
+}
+.texts{
+    /* background-color: aliceblue; */
+    margin-bottom: 5px;
+}
+.texts small {
+    display: block;
+    margin-bottom: -15px;
+
+}
+h1 {
+    color: #333;
+    text-align: left;
+}
+.img-box{
+    height: 200px;
+}
+.down-box{
+    background-color: rgb(237, 227, 229);
+    padding: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+small {
+    color: #666;
+    font-size: 0.9em;
+}
+
+p {
+    color: #333;
+    line-height: 1em;
+    
+}
+.update-delete{
+    display: flex;
+    text-align: center;
+}
+
+.update,
+.delete-btn
+ {
+    color: #007bff;
+    text-decoration: none;
+    padding: 0; 
+    margin: 0;
+    cursor: pointer;
+    font-size: 0.7rem;
+    
+}
+
+.update:hover,
+.delete-btn:hover
+ {
+    text-decoration: underline;
+    
+    
+
+}
+
+.update,
+.delete-btn {
+    margin-top: 20px;
+
+}
+
+.delete-btn {
+    display: inline-block;
+    background-color: #ffffff;
+    border: none;
+    margin-left: 10px; 
+}
+.texts-margin{
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+
+

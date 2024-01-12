@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extrahead %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/create.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+
+    <div class="review-box">
+      <div class="review-box-center">
+        
+        <h1 class="title"><span class="red-text">Movie</span> review 🍿</h1>
+
+        <form action="/posts/{{post.id}}/update" method="post">
+          {% csrf_token %}
+          <div class="write-review">
+            <div id="write-review-title">제목 : <input name="movie_title" value="{{post.movie_title}}"/><br/></div>
+            <div id="write-review-year">개봉년도 : <input name="created_year" value="{{post.created_year}}"/><br/></div>
+            <div id="write-review-g">장르 : <input name="genre" value ="{{post.genre}}"/><br/></div>
+            <div id="write-review-score">별점 : <input name="score" value="{{post.score}}"/><br/></div>
+            <div id="write-review-r">러닝타임 : <input name="running_time" value="{{post.running_time}}"/> <br/></div>
+            <div id="write-review-content">리뷰 : <textarea name="review_content" cols="30" rows="10" placeholder="내용">{{post.review_content}}</textarea></div>
+            <div id="write-review-d">감독 : <input name="director" value="{{post.director}}"/> <br/></div>
+            <div id="write-review-a">배우 : <input name="actor" value="{{post.actor}}"/> <br/></div>
+          
+          </div>
+          <div class="submit-box">
+            <input type="submit" value="Save">
+          </div>
+        </form>
+      </div>
+    </div>    
+
+{% endblock %}
+
+
+
+
+
