@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h1> Idea Detail </h1>
+  <p> 아이디어 세부내용 페이지입니다. 당신이 구현하려 한 아이디어들을 자세히 살펴보세요.</p>
+  <h1 style="color: green; font-size: 40px">❄{{ post.title }}❄</h1>
+  {% if post.photo.url != '' %}
+    <img src="{{post.photo.url}}" alt="개발툴 이미지" />
+  {% else %}
+    <img src="{% static 'posts/image/no_img.png' %}" alt="대체 텍스트" />
+  {% endif %}
+  
+  
+  <p> 아이디어 관심도 : {{post.interest}}</p>
+  <p>아이디어 설명 : {{post.content}}</p>
+  
+  
+  
+ 
+  <p>예상개발툴 : </p>
+  
+    <a href="{% url 'devtools:detail' post.devtool.pk %}" class="btn btn-success">
+        {{ post.devtool.dev_name }}
+    </a>
+ 
+
+  <hr />
+  <form action="{% url 'posts:delete' post.pk %}" method="POST">
+    {%csrf_token%}
+    <a href="{% url 'posts:update' post.pk %}" class="btn btn-primary">수정</a>
+    <a href="{% url 'posts:main' %}" class="btn btn-secondary">목록</a>
+    <button type="submit" class="btn btn-danger">삭제</button>
+    
+  </form>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block head%}
+  <title>SW IDEA</title>
+{%endblock%}
+
+{%block content%}
+  <div>    
+    <h1>DevTool List</h1>
+    <p>개발툴 목록 페이지 입니다. 자신이 사용가능한 개발툴의 목록을 확인해보세요. </p>
+  </div>
+
+  <div class="content-wrapper">
+    <!-- 개발틀 목록 -->
+    {% for devtool in devtools %}
+    <div class="devtool-list">
+      <a href="{% url 'devtools:detail' devtool.pk %}">
+        <button type="button" class="btn btn-outline-secondary">
+          <span>{{ devtool.dev_name }}    </span>
+        </button>
+      </a>
+      <strong>{{ devtool.dev_type }} / </strong>
+    <span>{{ devtool.dev_content }}</span>
+    </div>
+    {% endfor %}
+  </div>
+{%endblock%}

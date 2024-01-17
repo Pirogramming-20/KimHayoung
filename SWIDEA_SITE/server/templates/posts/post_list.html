@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{%block head%}
+  <title>사과 마켓</title>
+{%endblock%}
+
+{%block content%}
+  <div class="search-box">    
+    <form action="/">      
+      <input class = 'form-control mx-2' type="text" name="sort_name" placeholder="이름순" />
+      <input class = 'form-control mx-2' type="text" name="sort_recent" placeholder="최근순" />
+      <input class = 'form-control mx-2' type="text" name="sort_order" placeholder="등록순" />
+      <input class = 'btn btn-outline-success mx-2' type="submit" value="검색" />      
+    </form>
+    
+  </div>
+
+  <div class="content-wrapper">
+
+    <!-- 글 목록 -->
+    {% for post in posts %}
+      <div class="item">
+        
+        {% if post.photo.url != null and post.photo.url != '' %}
+          <img src="{{ post.photo.url }}" alt="대체텍스트" class="'item-img">
+        {% else %}
+          <img src="{% static 'posts/image/no_img.png' %}" alt="대체텍스트">
+
+        {% endif %}  
+        <div class="info">
+          <a href="{% url 'posts:detail' post.pk %}" class="title">
+            {{post.title}}
+          </a>
+           
+
+
+          <p class="dev_name">예상 개발툴: {{post.devtool.dev_name}}</p>
+           
+          <p class="interest">아이디이관심도 :{{post.interest}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{%endblock%}
